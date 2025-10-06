@@ -15,7 +15,7 @@ def choisir_bornes():
             borne_min = int(min_input) if min_input else 0
             break
         except ValueError:
-            print("❌ Veuillez entrer un nombre entier valide pour la borne minimale.")
+            print("Veuillez entrer un nombre entier valide pour la borne minimale.")
         except EOFError:
             # Gère les problèmes d'environnement de saisie
             print("\nFin de l'entrée détectée. Utilisation de la valeur par défaut (0).")
@@ -32,7 +32,7 @@ def choisir_bornes():
                 continue
             break
         except ValueError:
-            print("❌ Veuillez entrer un nombre entier valide pour la borne maximale.")
+            print(" Veuillez entrer un nombre entier valide pour la borne maximale.")
         except EOFError:
             # Gère les problèmes d'environnement de saisie
             print("\nFin de l'entrée détectée. Utilisation de la valeur par défaut (1000).")
@@ -80,7 +80,7 @@ def jouer_partie(borne_min, borne_max):
             print("Le programme s'est arrêté car il n'a pas pu lire votre entrée.")
             return  # Arrête la partie si EOF est rencontré
         except ValueError:
-            print("❌ Entrée non valide. Veuillez entrer un nombre entier.")
+            print(" Entrée non valide. Veuillez entrer un nombre entier.")
             nb_essais -= 1
             continue
 
@@ -92,7 +92,7 @@ def jouer_partie(borne_min, borne_max):
         else:
             # Succès
             trouve = True
-            print("\n🎉 Bravo! Bonne réponse! 🎉")
+            print("\n Bravo! Bonne réponse! ")
             print(f"Vous avez réussi en : {nb_essais} essai(s).")
             return  # Fin de la partie
 
@@ -125,7 +125,7 @@ def main():
         jouer_encore = choix
 
     # Message de fin
-    print("\nMerci et au revoir… 👋")
+    print("\nMerci et au revoir… ")
 
 
 if __name__ == "__main__":
